@@ -1,3 +1,5 @@
-body { text-align: center; font-family: sans-serif; padding-top: 50px; }
-button { padding: 15px 30px; font-size: 20px; margin: 10px; cursor: pointer; }
-h2 { margin-top: 30px; color: #333; }
+body { font-family: 'Segoe UI', sans-serif; background: #f4f4f9; display: flex; justify-content: center; padding-top: 50px; }
+.game-container { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; width: 350px; }
+button { padding: 15px 20px; font-size: 16px; margin: 10px; cursor: pointer; border: none; border-radius: 8px; background: #e0e0e0; transition: 0.2s; }
+button:hover { background: #d0d0d0; }
+#game-ui { margin-top: 20px; }

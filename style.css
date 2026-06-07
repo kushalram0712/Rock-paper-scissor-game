@@ -1,7 +1,7 @@
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #1a1a2e; color: white; display: flex; justify-content: center; padding-top: 50px; }
-.game-container { background: #16213e; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-align: center; width: 400px; }
-button { padding: 15px 25px; margin: 10px; cursor: pointer; border: none; border-radius: 12px; background: #e94560; color: white; font-weight: bold; transition: 0.3s; }
-button:hover { background: #ff4d6d; transform: translateY(-3px); }
-.history-log { margin-top: 20px; font-size: 0.9rem; color: #a0a0a0; border-top: 1px solid #333; padding-top: 10px; }
-@keyframes pop { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
-.animate { animation: pop 0.3s ease; }
+body { font-family: 'Segoe UI', sans-serif; background: #1a1a2e; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+.game-container { background: #16213e; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-align: center; width: 350px; }
+button { padding: 15px 20px; font-size: 16px; margin: 10px; cursor: pointer; border: none; border-radius: 10px; background: #e94560; color: white; transition: 0.3s; }
+button:hover { background: #ff4d6d; }
+.reset-btn { background: #555; margin-top: 20px; }
+.reset-btn:hover { background: #777; }
+#result { font-size: 1.2rem; color: #4ecca3; margin-top: 20px; }

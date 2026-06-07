@@ -1,35 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIST Secure Generator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="game-container">
+    <div class="card">
+        <h2>Secure Generator</h2>
+        <div class="controls">
+            <label>Length: <span id="lenVal">16</span></label>
+            <input type="range" id="length" min="8" max="64" value="16">
         </div>
-
-    <script>
-        console.log("Embedded script running!");
-        let mode = '';
-        function startGame(selectedMode) {
-            console.log("Mode selected:", selectedMode);
-            mode = selectedMode;
-            document.getElementById('menu').style.display = 'none';
-            document.getElementById('game-ui').style.display = 'block';
-        }
-        <h1>RPS Game</h1>
-        <div id="menu">
-            <button onclick="startGame('vs-comp')">Vs Computer</button>
-            <button onclick="startGame('local')">Local Multiplayer</button>
-        </div>
-        <div id="game-ui" style="display: none;">
-            <p id="turn-info">Player 1's turn</p>
-            <button onclick="handleInput('rock')">🪨</button>
-            <button onclick="handleInput('paper')">📄</button>
-            <button onclick="handleInput('scissors')">✂️</button>
-            <h2 id="result">Choose your weapon!</h2>
-            <button onclick="location.reload()">Reset Game</button>
+        
+        <div class="password-display" id="result">Click Generate</div>
+        
+        <button class="btn" id="generateBtn">Generate New Password</button>
+        <button class="btn" id="copyBtn" style="margin-top: 10px; background: #636e72;">Copy to Clipboard</button>
+        
+        <div class="meta-info" style="margin-top: 15px;">
+            <span id="entropy">Entropy: 0 bits</span>
+            <span id="copyStatus"></span>
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>

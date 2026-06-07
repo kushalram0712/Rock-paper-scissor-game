@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissors</title>
 </head>
 <body>
     <div class="game-container">
-        <h1>Rock Paper Scissors</h1>
-        
-        <!-- Menu -->
+        <h1>RPS Game</h1>
         <div id="menu">
             <button onclick="startGame('vs-comp')">Vs Computer</button>
             <button onclick="startGame('local')">Local Multiplayer</button>
         </div>
-
-        <!-- Game Interface (Hidden initially) -->
         <div id="game-ui" style="display: none;">
-            <div class="score-board">
-                <p id="turn-info">Player 1's turn</p>
-                <p>P1: <span id="p1-score">0</span> | P2/CPU: <span id="p2-score">0</span></p>
-            </div>
-            <div class="choices">
-                <button onclick="handleInput('rock')">🪨 Rock</button>
-                <button onclick="handleInput('paper')">📄 Paper</button>
-                <button onclick="handleInput('scissors')">✂️ Scissors</button>
-            </div>
+            <p id="turn-info">Player 1's turn</p>
+            <button onclick="handleInput('rock')">🪨</button>
+            <button onclick="handleInput('paper')">📄</button>
+            <button onclick="handleInput('scissors')">✂️</button>
             <h2 id="result">Choose your weapon!</h2>
-            <button onclick="resetGame()" style="background:#ffcccc;">Reset</button>
+            <button onclick="location.reload()">Reset Game</button>
         </div>
     </div>
     <script src="script.js"></script>

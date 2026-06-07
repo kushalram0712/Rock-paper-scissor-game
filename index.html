@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <title>Rock Paper Scissors</title>
 </head>
 <body>
     <div class="game-container">
+        </div>
+
+    <script>
+        console.log("Embedded script running!");
+        let mode = '';
+        function startGame(selectedMode) {
+            console.log("Mode selected:", selectedMode);
+            mode = selectedMode;
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('game-ui').style.display = 'block';
+        }
         <h1>RPS Game</h1>
         <div id="menu">
             <button onclick="startGame('vs-comp')">Vs Computer</button>

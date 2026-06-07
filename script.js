@@ -35,3 +35,22 @@ function determineWinner(c1, c2) {
     
     document.getElementById('result').innerText = result;
 }
+
+function resetGame() {
+    // 1. Reset variables
+    p1Score = 0;
+    p2Score = 0;
+    isPlayer1Turn = true;
+    
+    // 2. Update the UI text
+    document.getElementById('p1-score').innerText = "0";
+    document.getElementById('p2-score').innerText = "0";
+    document.getElementById('result').innerText = "Choose your weapon!";
+    document.getElementById('turn-info').innerText = "Player 1's turn";
+
+    // 3. Toggle visibility (The most important part)
+    document.getElementById('game-ui').style.display = 'none';
+    document.getElementById('menu').style.display = 'block';
+    
+    console.log("Game reset, returning to menu.");
+}

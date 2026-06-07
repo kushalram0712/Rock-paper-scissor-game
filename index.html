@@ -1,17 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Rock Paper Scissors</h1>
-    <div id="game">
-        <button onclick="play('rock')">Rock</button>
-        <button onclick="play('paper')">Paper</button>
-        <button onclick="play('scissors')">Scissors</button>
+    <div class="game-container">
+        <h1>Rock Paper Scissors</h1>
+        
+        <!-- Menu -->
+        <div id="menu">
+            <button onclick="startGame('vs-comp')">Vs Computer</button>
+            <button onclick="startGame('local')">Local Multiplayer</button>
+        </div>
+
+        <!-- Game Interface (Hidden initially) -->
+        <div id="game-ui" style="display: none;">
+            <div class="score-board">
+                <p id="turn-info">Player 1's turn</p>
+                <p>P1: <span id="p1-score">0</span> | P2/CPU: <span id="p2-score">0</span></p>
+            </div>
+            <div class="choices">
+                <button onclick="handleInput('rock')">🪨 Rock</button>
+                <button onclick="handleInput('paper')">📄 Paper</button>
+                <button onclick="handleInput('scissors')">✂️ Scissors</button>
+            </div>
+            <h2 id="result">Choose your weapon!</h2>
+            <button onclick="resetGame()" style="background:#ffcccc;">Reset</button>
+        </div>
     </div>
-    <h2 id="result">Choose your weapon!</h2>
     <script src="script.js"></script>
 </body>
 </html>
